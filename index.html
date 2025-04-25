@@ -1,86 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Michael Degtiarev - Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Degtiarev – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
       color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
     }
     .container {
       max-width: 900px;
-      margin: 50px auto;
-      background: white;
-      border-radius: 15px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 12px;
       padding: 30px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      animation: fadeIn 1s ease-in-out;
     }
-    img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
+    .profile-img {
+      max-width: 180px;
       border-radius: 50%;
-      display: block;
-      margin: 0 auto 20px;
+      float: right;
+      margin-left: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
-    h1, h2 {
-      text-align: center;
-      margin-bottom: 10px;
-    }
-    p, li {
-      font-size: 18px;
-      line-height: 1.6;
+    h2 {
+      color: #2c3e50;
+      margin-top: 40px;
     }
     ul {
-      padding-left: 20px;
+      list-style: none;
+      padding: 0;
     }
-    .section {
-      margin-top: 30px;
+    ul li::before {
+      content: "✔️ ";
+      color: #27ae60;
+    }
+    footer {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+    .contact-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #3498db;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .contact-btn:hover {
+      background: #2980b9;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Michael Degtiarev</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+    </nav>
+  </header>
 
-<div class="container">
-  <img src="profile.jpeg" alt="Michael Degtiarev">
-  <h1>Michael Degtiarev</h1>
-  <p style="text-align: center;">
-    Helping brokers, OTC desks, exchanges & payment providers scale with institutional-grade infrastructure, OTC liquidity and white-label tools.
-    <br>Let’s simplify and grow your crypto business together.
-  </p>
+  <div class="container">
+    <img src="profile.jpeg" alt="Michael Degtiarev" class="profile-img">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Helping brokers, OTC desks, exchanges & payment providers scale with institutional-grade infrastructure, OTC liquidity and white-label tools. Let’s simplify and grow your crypto business together.</p>
+    </section>
 
-  <div class="section">
-    <h2>Experience</h2>
-    <p><strong>Customer Success</strong><br>
-    Finery Markets · Full-time<br>
-    Oct 2022 - Present · 2 yrs 7 mos<br>
-    Valencia, Valencian Community, Spain · Remote
-    </p>
-    <p>I help brokers, OTC desks, exchanges, and payment providers scale their digital asset operations by delivering institutional-grade infrastructure, OTC liquidity and a white-label trading platform from Finery Markets.</p>
-    <p>With 16 years of experience in sales and marketing, including leadership roles at Deutsche Bank, HSBC, and Allianz, I bring a strong TradFi foundation into the crypto space. Prior to joining Finery Markets, I successfully led the growth of retail broker sales at a major bank in the CIS region.</p>
-    <p>My blend of traditional finance expertise and deep understanding of crypto infrastructure makes me a valuable partner for firms looking to launch or expand their digital asset offering.</p>
+    <section id="experience">
+      <h2>Experience</h2>
+      <p><strong>Customer Success</strong><br>
+      Finery Markets · Full-time<br>
+      Oct 2022 - Present · 2 yrs 7 mos<br>
+      Valencia, Valencian Community, Spain · Remote</p>
+      <p>I help brokers, OTC desks, exchanges, and payment providers scale their digital asset operations by delivering institutional-grade infrastructure, OTC liquidity and white-label trading platform from Finery Markets.</p>
+      <p>With 16 years of experience in sales and marketing, including leadership roles at Deutsche Bank, HSBC, and Allianz, I bring a strong TradFi foundation into the crypto space. Prior to joining Finery Markets, I successfully led the growth of retail broker sales at a major bank in the CIS region.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p><strong>Plekhanov Russian University of Economics</strong><br>
+      Master, Marketing (2004 - 2007)</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Cryptocurrency</li>
+        <li>Sale support</li>
+        <li>Management</li>
+        <li>Marketing</li>
+        <li>Retail Banking</li>
+      </ul>
+    </section>
+
+    <a class="contact-btn" href="mailto:michael@example.com">📩 Contact Me</a>
   </div>
 
-  <div class="section">
-    <h2>Education</h2>
-    <p>Plekhanov Russian University of Economics<br>
-    Master, Marketing (2004 - 2007)</p>
-  </div>
-
-  <div class="section">
-    <h2>Skills</h2>
-    <ul>
-      <li>Cryptocurrency</li>
-      <li>Sale support</li>
-      <li>Management</li>
-      <li>Marketing</li>
-      <li>Retail Banking</li>
-    </ul>
-  </div>
-</div>
-
+  <footer>
+    <p>&copy; 2025 Michael Degtiarev</p>
+  </footer>
 </body>
 </html>
